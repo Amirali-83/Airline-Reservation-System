@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Check-in</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="checkin-page">
+
+<header>
+  <nav class="top-nav">
+    <div class="nav-left">
+      <a href="Flight%20status.html">Flight Status</a>
+      <a href="checkin.html">Check-in</a>
+      <a href="account.html">My account</a>
+      <a href="fleet.html">Fleet</a>
+    </div>
+    <div class="nav-right">
+      <button class="signin-btn" onclick="location.href='signin.html'">Sign in / Sign Up</button>
+    </div>
+  </nav>
+</header>
+
+<div class="checkin-container">
+  <h1>Check-in</h1>
+  <form onsubmit="return redirectToSeatSelection(event)" class="checkin-form">
+    <input type="text" id="pnr" placeholder="Ticket number/PNR" required />
+    <input type="text" id="surname" placeholder="Passenger Surname" required />
+    <button type="submit">Check-in</button>
+  </form>
+</div>
+
+<footer class="checkin-footer">
+  <a href="index.html"> Home Page</a>
+  <a href="#"> Contact us</a>
+  <a href="#"> Help</a>
+</footer>
+
+<script>
+  function redirectToSeatSelection(event) {
+    event.preventDefault(); // prevent actual form submission
+
+    const pnr = document.getElementById('pnr').value.trim();
+    const surname = document.getElementById('surname').value.trim();
+
+    if (pnr && surname) {
+      // Redirect with PNR and surname as query parameters (optional)
+      window.location.href = `seat-selection.html?pnr=${encodeURIComponent(pnr)}&surname=${encodeURIComponent(surname)}`;
+    } else {
+      alert("Please fill in all fields correctly.");
+    }
+
+    return false;
+  }
+</script>
+
+</body>
+</html>

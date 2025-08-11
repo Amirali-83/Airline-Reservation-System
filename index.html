@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Airline Reservation - Home</title>
+    <!-- if your css lives at /css/style.css then change to css/style.css -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="Flight%20status.html">Flight status</a>
+            <a href="checkin.html">Check-in</a>
+            <a href="account.html">My account</a>
+            <a href="fleet.html">Fleet</a>
+        </div>
+        <div class="nav-right">
+            <a href="signin.html" class="sign-btn">Sign in / Sign Up</a>
+        </div>
+    </nav>
+</header>
+
+<main class="hero">
+    <h1>FLY WITH US</h1>
+
+    <!-- IMPORTANT: action points to your SearchServlet mapping -->
+    <form class="search-form" method="post" action="/search-flights">
+        <div class="input-row">
+            <input type="text" name="from" placeholder="From (e.g., LAX)" required />
+            <input type="text" name="to" placeholder="To (e.g., JFK)" required />
+            <input type="date" name="date" required />
+            <input type="number" name="pax" min="1" value="1" required />
+            <select name="cabin">
+                <option value="ANY">Any</option>
+                <option value="ECONOMY">Economy</option>
+                <option value="BUSINESS">Business</option>
+            </select>
+            <button type="submit">Search</button>
+        </div>
+    </form>
+
+
+</main>
+
+<footer>
+    <div class="footer-links">
+        <a href="index.html">Home Page</a>
+        <a href="#">Contact us</a>
+        <a href="#">Help</a>
+    </div>
+</footer>
+</body>
+</html>
