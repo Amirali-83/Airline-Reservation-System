@@ -8,6 +8,6 @@ This web-based Java project helps you in searching from pick-up location to dest
 
 ![Hope Page](./HomePage.png)
 ![Sign in](./Signin.png)
-![Sign up](./Signup.png)
-![check in](./checkin.png)
+![Sign up](./signup.png)
+![check-in](./check-in.png)
 ![Fleet](./Fleet.png)
